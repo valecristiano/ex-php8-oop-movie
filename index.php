@@ -1,8 +1,13 @@
 <?php
 require_once './Classes/movie.php';
+require_once './Classes/genre.php';
 
-$matrix = new Movie("Matrix", 1995, "dsiufhf.url", "Fantasy","loremi ipsum lorem ipsum lorem ipsum");
-$casper = new Movie("Casper", 1990, "dsiufhf.url", "Fantasy","loremi ipsum lorem ipsum lorem ipsum");
+$fantasy = new Genre("Fantasy", "Lorem impusm lorem lorem ipsum lorem", "film correlato");
+$azione = new Genre("Azione", "Lorem impusm lorem lorem ipsum lorem", "film correlato");
+
+
+$matrix = new Movie("Matrix", 1995, "dsiufhf.url", $azione,"loremi ipsum lorem ipsum lorem ipsum");
+$casper = new Movie("Casper", 1990, "dsiufhf.url", $fantasy,"loremi ipsum lorem ipsum lorem ipsum");
  
 var_dump($matrix);
 var_dump($casper);

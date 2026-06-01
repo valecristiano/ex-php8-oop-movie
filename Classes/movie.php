@@ -1,12 +1,14 @@
 <?php 
 
+require_once 'genre.php';
+
 class Movie {
 
    public function __construct(
-       public string $_itolo,
+       public string $titolo,
        public int $anno,
        public string $url,
-       public string $genere,
+       public Genre $genere,
        public string $descrizione
    ) {}
 
