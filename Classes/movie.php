@@ -1,17 +1,21 @@
 <?php 
 
-require_once 'genre.php';
+require_once 'Genre.php';
+require_once './Traits/Premiato.php';
+
 
 class Movie {
-
-   public function __construct(
+    use Premiato;
+    
+    public function __construct(
        public string $titolo,
        public int $anno,
        public string $url,
-       public Genre $genere,
+       public array $generi,
        public string $descrizione
    ) {}
 
+   
    public function filmRecenti (): string {
     if($this->anno > 2020) {
         return "Film recente";
